@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -6,7 +6,8 @@ app = Flask(__name__)
 #quando não tem nada ele considera#
 
 def home():
-    return'Hello, Web'
+    #templates/home.html
+    return render_template('home.html')
 
 @app.route('/bye')
 def bye():
